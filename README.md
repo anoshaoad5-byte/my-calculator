@@ -1,3 +1,3 @@
-<h1>Calculator</h1>
+<h1> MY AI based Calculator</h1>
 <br>
-<p>Built with HTML, CSS, and JavaScript.</p>
+<p> Built with HTML, CSS, and JavaScript.</p>
