@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <title>calculator</title>
+</head>
+<body>
+    <div class="calculator">
+
+        <!-- Top control row: scientific toggle + help chatbot + back arrow (back shown only in scientific mode) -->
+        <div class="top-row">
+            <button id="sciToggle" class="top-btn">SCI</button>
+            <button id="helpBtn" class="top-btn">🪆 Vedhi</button>
+             <button id="backBtn" class="top-btn" style="display:none;">&#8592; Back</button>
+        </div>
+
+        <input type="text" placeholder="0" id="inputBox" readonly>
+
+        <!-- Scientific buttons, hidden until SCI is toggled on -->
+        <div class="sci-buttons" id="sciButtons">
+            <button class="sci" data-value="sin(">sin</button>
+            <button class="sci" data-value="cos(">cos</button>
+            <button class="sci" data-value="tan(">tan</button>
+            <button class="sci" data-value="log(">log</button>
+            <button class="sci" data-value="ln(">ln</button>
+            <button class="sci" data-value="sqrt(">√</button>
+            <button class="sci" data-value="^">x^y</button>
+            <button class="sci" data-value="π">π</button>
+            <button class="sci" data-value="e">e</button>
+            <button class="sci" data-value="(">(</button>
+            <button class="sci" data-value=")">)</button>
+            <button class="sci" data-value="!">x!</button>
+        </div>
+
+        <div class="row">
+            <button class="operator">AC</button>
+            <button class="operator">DEL</button>
+            <button class="operator">%</button>
+            <button class="operator">/</button>
+        </div>
+        <div class="row">
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button class="operator">*</button>
+        </div>
+        <div class="row">
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button class="operator">-</button>
+        </div>
+        <div class="row">
+            <button>3</button>
+            <button>2</button>
+            <button>1</button>
+            <button class="operator">+</button>
+        </div>
+        <div class="row">
+            <button>00</button>
+            <button>0</button>
+            <button>.</button>
+            <button class="equalBtn">=</button>
+        </div>
+
+        <!-- Help chatbot panel, hidden until the Help button is clicked -->
+        <div class="help-panel" id="helpPanel">
+            <div class="help-header">
+    <div class="help-title">
+        <span class="help-avatar">🪆</span>
+        <h3>Vedhi</h3>
+    </div>
+    <button id="helpClose" class="help-close" type="button">&times;</button>
+</div>
+            <div class="help-messages" id="helpMessages"></div>
+            <div class="help-input-row">
+                <input type="text" id="helpInput" placeholder="Ask about a button, e.g. what does SCI do?">
+                <button id="helpSend" type="button">Send</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
